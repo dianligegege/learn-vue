@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import FatherProps from './views/FatherProps.vue'
 import FatherRef from './views/FatherRef.vue'
 import FatherEmit from './views/FatherEmit.vue'
+import RenderJsx from './views/RenderJsx.vue'
+import Life from './views/Life.vue'
 
 
 Vue.use(Router)
@@ -13,22 +15,32 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/props',
       name: 'fatherprops',
-      component: FatherProps
+      component: FatherProps,
     },
     {
       path: '/refs',
       name: 'fatherRef',
-      component: FatherRef
+      component: FatherRef,
     },
     {
       path: '/emit',
       name: 'fatherEmit',
-      component: FatherEmit
+      component: FatherEmit,
+    },
+    {
+      path: '/render&jsx',
+      name: 'fatherEmit',
+      component: RenderJsx,
+    },
+    {
+      path: '/life',
+      name: 'life',
+      component: Life,
     },
     {
       path: '/about',

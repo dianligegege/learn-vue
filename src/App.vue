@@ -2,7 +2,13 @@
   <div id="app">
     <div id="nav">
       <router-link to="/home">Home</router-link> |
-      <router-link to="/father">父传子 props</router-link>
+      <router-link to="/props">props</router-link> |
+      <router-link to="/refs">refs</router-link> |
+      <router-link to="/emit">emit</router-link> |
+      <router-link to="/renderjsx">Render&JSX</router-link> |
+      <router-link to="/life">生命周期</router-link> |
+
+
     </div>
     <router-view/>
   </div>

@@ -6,7 +6,7 @@ import FatherRef from './views/FatherRef.vue'
 import FatherEmit from './views/FatherEmit.vue'
 import RenderJsx from './views/RenderJsx.vue'
 import Life from './views/Life.vue'
-
+import FatherSlot from './views/FatherSlot.vue'
 
 Vue.use(Router)
 
@@ -19,28 +19,33 @@ export default new Router({
     },
     {
       path: '/props',
-      name: 'fatherprops',
+      name: 'props',
       component: FatherProps,
     },
     {
       path: '/refs',
-      name: 'fatherRef',
+      name: 'Ref',
       component: FatherRef,
     },
     {
       path: '/emit',
-      name: 'fatherEmit',
+      name: 'Emit',
       component: FatherEmit,
     },
     {
       path: '/render&jsx',
-      name: 'fatherEmit',
+      name: 'Emit',
       component: RenderJsx,
     },
     {
       path: '/life',
       name: 'life',
       component: Life,
+    },
+    {
+      path: '/slot',
+      name: 'slot',
+      component: FatherSlot,
     },
     {
       path: '/about',

@@ -19,6 +19,7 @@
 import Son from '@/components/SonRef.vue';
 
 export default {
+    /* eslint-disable */
     name: 'FatherRef',
     components: {
         Son

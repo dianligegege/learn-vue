@@ -35,15 +35,21 @@ export default {
         },
         fts4: {
             type: Object,
-            default: '默认值'
+            default() {
+                return {}
+            }
         },
         fts5: {
             type: Object,
-            default: '默认值'
+            default() {
+                return {}
+            }
         },
         fts6: {
             type: String,
-            default: '默认值'
+            default() {
+                return {}
+            }
         }
     },
     data() {

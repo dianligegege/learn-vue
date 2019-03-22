@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/props">props</router-link> |
+      <router-link to="/refs">refs</router-link> |
+      <router-link to="/emit">emit</router-link> |
+      <router-link to="/renderjsx">Render&JSX</router-link> |
+      <router-link to="/life">生命周期</router-link> |
+      <router-link to="/slot">slot</router-link> |
     </div>
     <router-view/>
   </div>
@@ -15,6 +20,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 </style>

@@ -6,7 +6,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 
     state: {
-        count: 20,
+        count: 1,
+        countn: 0,
+        countobj: 0,
         todos: [
             {id: 1, text: '我的done是true', done: true},
             {id: 2, text: '我的done是false', done: false},
@@ -43,6 +45,14 @@ export default new Vuex.Store({
     mutations: {
         increment (state) {
             state.count++
+        },
+        // 传入一个载荷
+        incrementn (state) {
+            state.countn += state.count;
+        },
+        // 载荷是一个对象
+        incrementobj (state, payload) {
+            state.countobj += payload.amount
         }
     }
 })

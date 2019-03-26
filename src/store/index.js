@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 
     state: {
-        count: 0,
+        count: 20,
         todos: [
             {id: 1, text: '我的done是true', done: true},
             {id: 2, text: '我的done是false', done: false},

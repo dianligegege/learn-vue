@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import FatherProps from './views/FatherProps.vue'
-import FatherRef from './views/FatherRef.vue'
-import FatherEmit from './views/FatherEmit.vue'
-import RenderJsx from './views/RenderJsx.vue'
-import Life from './views/Life.vue'
-import FatherSlot from './views/FatherSlot.vue'
+import FatherProps from './views/transform/FatherProps.vue'
+import FatherRef from './views/transform/FatherRef.vue'
+import FatherEmit from './views/transform/FatherEmit.vue'
+import RenderJsx from './views/rander/RenderJsx.vue'
+import Life from './views/life/Life.vue'
+import FatherSlot from './views/transform/FatherSlot.vue'
+import Vuex from './views/vuex/Vuex.vue'
+import State from './views/vuex/State.vue'
+import Getter from './views/vuex/Getter.vue'
+import Mutation from './views/vuex/Mutation.vue'
 
 Vue.use(Router)
 
@@ -48,12 +52,24 @@ export default new Router({
       component: FatherSlot,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+      path: '/vuex',
+      name: 'vuex',
+      component: Vuex,
+    },
+    {
+      path: '/vuex/state',
+      name: 'state',
+      component: State,
+    },
+    {
+      path: '/vuex/getter',
+      name: 'getter',
+      component: Getter,
+    },
+    {
+      path: '/vuex/mutation',
+      name: 'mutation',
+      component: Mutation,
+    },
   ]
 })

@@ -3,6 +3,7 @@
         <div :class="propcss">
             {{ msg }}
         </div>
+        <div>{{ computedMsg1 }}</div>
     </div>
 </template>
 

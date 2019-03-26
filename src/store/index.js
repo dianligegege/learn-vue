@@ -3,12 +3,15 @@ import Vue from 'vue';
 
 Vue.use(Vuex);
 
+const SOME_MUTATION = 'SOME_MUTATION';
+
 export default new Vuex.Store({
 
     state: {
         count: 1,
         countn: 0,
         countobj: 0,
+        countes: 1,
         todos: [
             {id: 1, text: '我的done是true', done: true},
             {id: 2, text: '我的done是false', done: false},
@@ -53,6 +56,10 @@ export default new Vuex.Store({
         // 载荷是一个对象
         incrementobj (state, payload) {
             state.countobj += payload.amount
+        },
+        // 使用ES2015风格的计算属性命名功能来使用一个常量作为函数名
+        [SOME_MUTATION] (state) {
+            state.countes += 1;
         }
     }
 })

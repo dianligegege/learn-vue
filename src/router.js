@@ -11,6 +11,8 @@ import Vuex from './views/vuex/Vuex.vue'
 import State from './views/vuex/State.vue'
 import Getter from './views/vuex/Getter.vue'
 import Mutation from './views/vuex/Mutation.vue'
+import Action from './views/vuex/Action.vue'
+
 
 Vue.use(Router)
 
@@ -70,6 +72,11 @@ export default new Router({
       path: '/vuex/mutation',
       name: 'mutation',
       component: Mutation,
+    },
+    {
+      path: '/vuex/action',
+      name: 'action',
+      component: Action,
     },
   ]
 })

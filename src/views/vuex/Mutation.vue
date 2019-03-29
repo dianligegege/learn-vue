@@ -3,11 +3,13 @@
         <div><b>count:</b>{{ count }}</div>
         <div><b>count+n:</b>{{ countn }}</div>
         <div><b>count+obj.amount:</b>{{ countobj }}</div>
-
+        <button @click="increment()">点击触发increament</button>
     </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
     computed: {
         count() {
@@ -17,7 +19,7 @@ export default {
 
         // 载荷是一个值
         countn() {
-            // this.$store.commit('incrementn', 10);
+            this.$store.commit('incrementn', 10);
             return this.$store.state.countn;
         },
 
@@ -27,15 +29,21 @@ export default {
                 amount: 20
             })
             return this.$store.state.countobj;
-        }
+        },
         // 或者这样写
         // countobj() {
-        //     type: 'increamentobj',
-        //     amount: 20
+        //     this.store.commit({
+        //         type: 'increamentobj',
+        //         amount: 20
+        //     })
         // }
-
-
-    }
+    },
+    // mutation放在方法里
+    methods: {
+        ...mapMutations([
+            'increment'
+        ]),
+    },
 }
 </script>
 

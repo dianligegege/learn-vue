@@ -9,6 +9,7 @@
       <router-link to="/life">生命周期</router-link> |
       <router-link to="/slot">slot</router-link> |
       <router-link to="/vuex">vuex</router-link> |
+      <router-link to="/modules/index">module</router-link> |
     </div>
     <router-view/>
   </div>

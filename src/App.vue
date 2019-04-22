@@ -10,6 +10,8 @@
       <router-link to="/slot">slot</router-link> |
       <router-link to="/vuex">vuex</router-link> |
       <router-link to="/modules/index">module</router-link> |
+      <router-link to="/watch">watch</router-link> |
+
     </div>
     <router-view/>
   </div>

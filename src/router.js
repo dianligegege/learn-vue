@@ -13,6 +13,8 @@ import Getter from './views/vuex/Getter.vue'
 import Mutation from './views/vuex/Mutation.vue'
 import Action from './views/vuex/Action.vue'
 import Modules from './views/modules/Index.vue'
+import Watch from './views/watch/Watch.vue'
+
 
 Vue.use(Router)
 
@@ -82,6 +84,11 @@ export default new Router({
       path: '/modules/index',
       name: 'index',
       component: Modules,
+    },
+    {
+      path: '/watch',
+      name: 'watch',
+      component: Watch,
     },
   ]
 })

@@ -14,6 +14,18 @@ export default {
     data() {
         return {
             datamsg: 'datamsg值',
+            getsomefun: this.getsome(),
+            getotherfun: this.getother(),
+        }
+    },
+    methods: {
+        getsome() {
+            setTimeout(() => {
+                return "data中请求的函数返回值"
+            }, 2000);
+        },
+        getother() {
+            return "getother返回值";
         }
     },
     props: {
@@ -53,6 +65,9 @@ export default {
     },
     created: function () {
         console.log('########################created##########################');
+        console.log(this.datamsg);//datamsg值
+        console.log(this.getsomefun);//undefined
+        console.log(this.getotherfun);//getother返回值
         console.log(this.$el); // undefined
         console.log('created props', this.msg); // 成功
         console.log('created div节点', document.getElementsByClassName('div1')[0]); // undefined
@@ -62,6 +77,7 @@ export default {
     },
     beforeMount: function() {
         console.log('#######################beforeMount###########################');
+        console.log(this.getsomefun);//undefined
         console.log(this.$el); // undefined
         console.log('beforeMount props', this.msg); // 成功
         console.log('beforeMount div节点', document.getElementsByClassName('div1')[0]); // undefined
@@ -71,6 +87,7 @@ export default {
     },
     mounted: function() {
         console.log('######################mounted############################');
+        console.log(this.getsomefun);//undefined
         console.log(this.$el); // 成功 可以操作真是dom
         console.log('mounted props', this.msg); // 成功
         console.log('mounted div节点', document.getElementsByClassName('div1')[0]); // undefined

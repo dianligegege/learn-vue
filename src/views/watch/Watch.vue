@@ -51,6 +51,10 @@ export default {
                 this.endNumber = newNumber + this.firstNumber;
             }
         },
+        /**
+         * 对象obj1
+         * @type Object
+         */
         obj1: {
             immediate: true,
             handler() {

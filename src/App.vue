@@ -11,6 +11,7 @@
       <router-link to="/vuex">vuex</router-link> |
       <router-link to="/modules/index">module</router-link> |
       <router-link to="/watch">watch</router-link> |
+      <router-link to="/animate">animate</router-link> |
 
     </div>
     <router-view/>

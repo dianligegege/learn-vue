@@ -14,6 +14,8 @@ import Mutation from './views/vuex/Mutation.vue'
 import Action from './views/vuex/Action.vue'
 import Modules from './views/modules/Index.vue'
 import Watch from './views/watch/Watch.vue'
+import Animate from './views/animate/Animate.vue'
+import Single from './views/animate/Single.vue'
 
 
 Vue.use(Router)
@@ -89,6 +91,16 @@ export default new Router({
       path: '/watch',
       name: 'watch',
       component: Watch,
+    },
+    {
+      path: '/animate',
+      name: 'animate',
+      component: Animate,
+    },
+    {
+      path: '/animate/single',
+      name: 'single',
+      component: Single,
     },
   ]
 })

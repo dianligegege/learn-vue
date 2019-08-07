@@ -16,6 +16,7 @@ import Modules from './views/modules/Index.vue'
 import Watch from './views/watch/Watch.vue'
 import Animate from './views/animate/Animate.vue'
 import Single from './views/animate/Single.vue'
+import Many from './views/animate/Many.vue'
 
 
 Vue.use(Router)
@@ -101,6 +102,11 @@ export default new Router({
       path: '/animate/single',
       name: 'single',
       component: Single,
+    },
+    {
+      path: '/animate/many',
+      name: 'many',
+      component: Many,
     },
   ]
 })

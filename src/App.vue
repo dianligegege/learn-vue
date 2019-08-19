@@ -12,6 +12,7 @@
       <router-link to="/modules/index">module</router-link> |
       <router-link to="/watch">watch</router-link> |
       <router-link to="/animate">animate</router-link> |
+      <router-link to="/form/form">form</router-link> |
 
     </div>
     <router-view/>

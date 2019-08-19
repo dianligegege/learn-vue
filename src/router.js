@@ -17,7 +17,7 @@ import Watch from './views/watch/Watch.vue'
 import Animate from './views/animate/Animate.vue'
 import Single from './views/animate/Single.vue'
 import Many from './views/animate/Many.vue'
-
+import Form from './views/form/Form.vue'
 
 Vue.use(Router)
 
@@ -107,6 +107,11 @@ export default new Router({
       path: '/animate/many',
       name: 'many',
       component: Many,
+    },
+    {
+      path: '/form/form',
+      name: 'form',
+      component: Form,
     },
   ]
 })

@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import FatherProps from './views/transform/FatherProps.vue'
 import FatherRef from './views/transform/FatherRef.vue'
 import FatherEmit from './views/transform/FatherEmit.vue'
+import FatherAttrs from './views/transform/FatherAttrs.vue'
 import RenderJsx from './views/rander/RenderJsx.vue'
 import Life from './views/life/Life.vue'
 import FatherSlot from './views/transform/FatherSlot.vue'
@@ -42,6 +43,11 @@ export default new Router({
       path: '/emit',
       name: 'Emit',
       component: FatherEmit,
+    },
+    {
+      path: '/attrs',
+      name: 'Attrs',
+      component: FatherAttrs,
     },
     {
       path: '/render&jsx',

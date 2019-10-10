@@ -5,6 +5,7 @@
       <router-link to="/props">props</router-link> |
       <router-link to="/refs">refs</router-link> |
       <router-link to="/emit">emit</router-link> |
+      <router-link to="/attrs">$attrs</router-link> |
       <router-link to="/renderjsx">Render&JSX</router-link> |
       <router-link to="/life">生命周期</router-link> |
       <router-link to="/slot">slot</router-link> |
@@ -13,7 +14,6 @@
       <router-link to="/watch">watch</router-link> |
       <router-link to="/animate">animate</router-link> |
       <router-link to="/form/form">form</router-link> |
-
     </div>
     <router-view/>
   </div>

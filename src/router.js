@@ -19,6 +19,7 @@ import Animate from './views/animate/Animate.vue'
 import Single from './views/animate/Single.vue'
 import Many from './views/animate/Many.vue'
 import Form from './views/form/Form.vue'
+import Responsive from './views/responsive'
 
 Vue.use(Router)
 
@@ -118,6 +119,11 @@ export default new Router({
       path: '/form/form',
       name: 'form',
       component: Form,
+    },
+    {
+      path: '/responsive',
+      name: 'responsive',
+      component: Responsive,
     },
   ]
 })

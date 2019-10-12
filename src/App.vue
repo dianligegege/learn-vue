@@ -14,6 +14,7 @@
       <router-link to="/watch">watch</router-link> |
       <router-link to="/animate">animate</router-link> |
       <router-link to="/form/form">form</router-link> |
+      <router-link to="/responsive">responsive</router-link> |
     </div>
     <router-view/>
   </div>

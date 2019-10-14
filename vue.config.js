@@ -6,5 +6,14 @@ module.exports = {
   productionSourceMap: undefined,
   parallel: undefined,
   css: undefined,
-  lintOnSave: false
+  lintOnSave: false,
+
+  pluginOptions: {
+    i18n: {
+      locale: 'zh',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: false
+    }
+  }
 }

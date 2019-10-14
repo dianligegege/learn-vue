@@ -15,6 +15,8 @@
       <router-link to="/animate">animate</router-link> |
       <router-link to="/form/form">form</router-link> |
       <router-link to="/responsive">responsive</router-link> |
+      <router-link to="/directives">directives</router-link> |
+      <router-link to="/plugins">plugins</router-link> |
     </div>
     <router-view/>
   </div>

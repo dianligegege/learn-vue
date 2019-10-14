@@ -20,6 +20,8 @@ import Single from './views/animate/Single.vue'
 import Many from './views/animate/Many.vue'
 import Form from './views/form/Form.vue'
 import Responsive from './views/responsive'
+import Directives from './views/Directives'
+import Plugins from './views/plugins'
 
 Vue.use(Router)
 
@@ -124,6 +126,16 @@ export default new Router({
       path: '/responsive',
       name: 'responsive',
       component: Responsive,
+    },
+    {
+      path: '/Directives',
+      name: 'directives',
+      component: Directives,
+    },
+    {
+      path: '/plugins',
+      name: 'plugins',
+      component: Plugins,
     },
   ]
 })

@@ -4,8 +4,10 @@ import router from './router'
 import store from './store'
 import iView from 'iview'
 import './plugins/iview.js'
+import MyPlugin from './plugins/myPlugin'
 
 Vue.use(iView);
+Vue.use(MyPlugin);
 
 Vue.config.productionTip = false
 

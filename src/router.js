@@ -22,6 +22,7 @@ import Form from './views/form/Form.vue'
 import Responsive from './views/responsive'
 import Directives from './views/Directives'
 import Plugins from './views/plugins'
+import FormDemo from './views/formDemo'
 
 Vue.use(Router)
 
@@ -133,9 +134,14 @@ export default new Router({
       component: Directives,
     },
     {
-      path: '/plugins',
+      path: '/form/plugins',
       name: 'plugins',
       component: Plugins,
+    },
+    {
+      path: '/form-demo',
+      name: 'formDemo',
+      component: FormDemo,
     },
   ]
 })

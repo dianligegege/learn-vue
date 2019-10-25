@@ -8,6 +8,9 @@
         </div>
         <p v-pin:[direction]="200">I am pinned onto the page at 200px to the left.</p>
         <div v-demo:foo.a.b="message"></div>
+
+        <button @click="$router.push('./plugins')">路由跳转</button>
+
     </div>
 </template>
 

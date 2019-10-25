@@ -16,7 +16,10 @@
       <router-link to="/form/form">form</router-link> |
       <router-link to="/responsive">responsive</router-link> |
       <router-link to="/directives">directives</router-link> |
-      <router-link to="/plugins">plugins</router-link> |
+      <router-link to="/form/plugins">plugins</router-link> |
+      <router-link to="/form-demo">formDemo</router-link> |
+
+      <button @click="$router.push('./plugins?name=zhangli')">路由跳转</button>
     </div>
     <router-view/>
   </div>

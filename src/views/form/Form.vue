@@ -20,6 +20,8 @@
                 <i-input :maxlength=8 v-model="formValidate.wa" placeholder="限制总位数和小数点后位数"></i-input>
             </FormItem>
         </i-form>
+
+        <button @click="$router.push('./plugins')">路由跳转</button>
     </div>
 </template>
 

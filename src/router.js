@@ -23,6 +23,7 @@ import Responsive from './views/responsive'
 import Directives from './views/Directives'
 import Plugins from './views/plugins'
 import FormDemo from './views/formDemo'
+import FontAuto from './views/fontAuto'
 
 Vue.use(Router)
 
@@ -142,6 +143,10 @@ export default new Router({
       path: '/form-demo',
       name: 'formDemo',
       component: FormDemo,
+    },
+    {
+      path: '/font-auto',
+      component: FontAuto,
     },
   ]
 })

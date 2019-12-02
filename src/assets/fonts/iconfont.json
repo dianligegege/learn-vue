@@ -1,0 +1,51 @@
+{
+  "id": "624920",
+  "name": "first progrom",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "657463",
+      "name": "餐饮",
+      "font_class": "canyin",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "657465",
+      "name": "景点",
+      "font_class": "jingdian",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "658008",
+      "name": "多语言",
+      "font_class": "duoyuyan",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "658047",
+      "name": "无线网络",
+      "font_class": "wuxianwangluo",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "4266194",
+      "name": "右旋转",
+      "font_class": "youxuanzhuan",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "4266201",
+      "name": "左旋转",
+      "font_class": "zuoxuanzhuan",
+      "unicode": "e722",
+      "unicode_decimal": 59170
+    }
+  ]
+}

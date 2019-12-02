@@ -24,6 +24,7 @@ import Directives from './views/Directives'
 import Plugins from './views/plugins'
 import FormDemo from './views/formDemo'
 import FontAuto from './views/fontAuto'
+import IconFont from './views/iconFont'
 
 Vue.use(Router)
 
@@ -147,6 +148,10 @@ export default new Router({
     {
       path: '/font-auto',
       component: FontAuto,
+    },
+    {
+      path: '/icon-font',
+      component: IconFont,
     },
   ]
 })

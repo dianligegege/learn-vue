@@ -19,6 +19,7 @@
       <router-link to="/form/plugins">plugins</router-link> |
       <router-link to="/form-demo">formDemo</router-link> |
       <router-link to="/font-auto">FontAuto</router-link> |
+      <router-link to="/icon-font">IconFont</router-link> |
 
       <button @click="$router.push('./plugins?name=zhangli')">路由跳转</button>
     </div>

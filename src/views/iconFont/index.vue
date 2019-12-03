@@ -7,17 +7,24 @@
             >
                 <FontUnicode/>
             </TabPane>
+            <TabPane
+                label="svg"
+                name="name2"
+            >
+                <FontSvg/>
+            </TabPane>
         </Tabs>
     </div>
 </template>
 
 <script>
-import FontUnicode from '@/components/fontType/FontUnicode.vue';
-
+import FontUnicode from './FontUnicode.vue';
+import FontSvg from './FontSvg.vue';
 
 export default {
     components: {
         FontUnicode,
+        FontSvg,
     },
 };
 </script>

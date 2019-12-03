@@ -25,6 +25,8 @@ import Plugins from './views/plugins'
 import FormDemo from './views/formDemo'
 import FontAuto from './views/fontAuto'
 import IconFont from './views/iconFont'
+import Require from './views/require'
+import International from './views/international'
 
 Vue.use(Router)
 
@@ -152,6 +154,14 @@ export default new Router({
     {
       path: '/icon-font',
       component: IconFont,
+    },
+    {
+      path: '/require',
+      component: Require,
+    },
+    {
+      path: '/international',
+      component: International,
     },
   ]
 })

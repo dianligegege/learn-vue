@@ -27,8 +27,11 @@ export default {
                     label: '英文',
                 }
             ],
-            model1: 'zh'
+            model1: ''
         }
+    },
+    mounted() {
+        this.model1 = this.$i18n.locale;
     },
     watch: {
         model1(val) {

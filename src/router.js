@@ -27,6 +27,7 @@ import FontAuto from './views/fontAuto'
 import IconFont from './views/iconFont'
 import Require from './views/require'
 import International from './views/international'
+import Swiper from './views/swiper'
 
 Vue.use(Router)
 
@@ -162,6 +163,10 @@ export default new Router({
     {
       path: '/international',
       component: International,
+    },
+    {
+      path: '/swiper',
+      component: Swiper,
     },
   ]
 })

@@ -10,6 +10,9 @@
                 :key="item.value"
             >{{ item.label }}</Option>
         </Select>
+        <div class="div-bg-box">
+            <div class="div-bg">123</div>
+        </div>
     </div>
 </template>
 
@@ -40,3 +43,20 @@ export default {
     }
 }
 </script>
+
+<style>
+.div-bg {
+    width: 100%;
+    height: 500px;
+    background-image: url('~@/assets/img/bg.png');
+    background-repeat: no-repeat;
+    background-size: 1920px;
+    background-position: center;
+}
+
+.div-bg-box {
+    margin: 0 auto;
+    width: 1920px;
+    background-image: radial-gradient(49% 20%, #02C4FF 55%, #011E30 80%);
+}
+</style>

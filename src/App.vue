@@ -22,6 +22,7 @@
       <router-link to="/icon-font">IconFont</router-link> |
       <router-link to="/require">require.context</router-link> |
       <router-link to="/International">国际化</router-link> |
+      <router-link to="/swiper">轮播图</router-link> |
 
       <button @click="$router.push('./plugins?name=zhangli')">路由跳转</button>
     </div>

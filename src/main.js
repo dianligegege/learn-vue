@@ -6,6 +6,7 @@ import iView from 'iview'
 import './plugins/iview.js'
 import MyPlugin from './plugins/myPlugin'
 import i18n from './i18n'
+import ElementUI from 'element-ui';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
@@ -16,6 +17,7 @@ import '@/assets/icons/index.js'
 import '@/utils/components.js'
 
 Vue.use(iView);
+Vue.use(ElementUI);
 Vue.use(MyPlugin);
 Vue.use(VueAwesomeSwiper);
 

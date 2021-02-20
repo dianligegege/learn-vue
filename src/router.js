@@ -29,6 +29,7 @@ import Require from './views/require'
 import International from './views/international'
 import Swiper from './views/swiper'
 import Input from './views/input'
+import Danmu from './views/danmu'
 
 Vue.use(Router)
 
@@ -173,5 +174,9 @@ export default new Router({
       path: '/input',
       component: Input,
     },
+    {
+        path: '/danmu',
+        component: Danmu,
+      },
   ]
 })

@@ -26,9 +26,11 @@
 </template>
 
 <script>
+import getNumRegExp from 'number-validate'
+
 export default {
     data() {
-        const XiaoRegExp = this.getNumRegExp(2,3);
+        const XiaoRegExp = getNumRegExp(2,3);
         const validateXioashu = (rule, value, callback) => {
             console.log(XiaoRegExp);
             if (!XiaoRegExp.test(value)) {
@@ -37,7 +39,7 @@ export default {
                 callback()
             }
         };
-        const ZhenRegExp = this.getNumRegExp(4,0);
+        const ZhenRegExp = getNumRegExp(4,0);
         const validatezhengshu = (rule, value, callback) => {
             console.log(ZhenRegExp);
             if (!ZhenRegExp.test(value)) {
@@ -46,7 +48,7 @@ export default {
                 callback()
             }
         };
-        const BeforRegExp = this.getNumRegExp(4);
+        const BeforRegExp = getNumRegExp(4);
         const validateBefore = (rule, value, callback) => {
             console.log(BeforRegExp);
             if (!BeforRegExp.test(value)) {
@@ -55,7 +57,7 @@ export default {
                 callback()
             }
         };
-        const AfterRegExp = this.getNumRegExp(null,4);
+        const AfterRegExp = getNumRegExp(null,4);
         const validateAfter = (rule, value, callback) => {
             console.log(AfterRegExp);
             if (!AfterRegExp.test(value)) {
@@ -64,7 +66,7 @@ export default {
                 callback()
             }
         };
-        const WbRegExp = this.getNumRegExp(4,null,8);
+        const WbRegExp = getNumRegExp(4,null,8);
         const validateWb = (rule, value, callback) => {
             console.log(WbRegExp);
             if (!WbRegExp.test(value)) {
@@ -73,7 +75,7 @@ export default {
                 callback()
             }
         };
-        const WaRegExp = this.getNumRegExp(null,4,8);
+        const WaRegExp = getNumRegExp(null,4,8);
         const validateWa = (rule, value, callback) => {
             console.log(WaRegExp);
             if (!WaRegExp.test(value)) {
@@ -127,33 +129,36 @@ export default {
          * @return {Object} 相对应的正则表达式
          * @description 根据参数类型返回对应正则
          */
-        getNumRegExp (beforeLen = null, afterLen = null, wholeLen = null) {
-            const wl = wholeLen - 1;
-            const bl = beforeLen - 1;
-            const al = afterLen - 1;
-            if (beforeLen && afterLen > 0) {
-                // 小数，并限制小数点前/后位数
-                return new RegExp(`^[1-9]\\d{0,${bl}}$|^[1-9]\\d{0,${bl}}\\.\\d{0,${al}}[1-9]$|^0\\.\\d{0,${al}}[1-9]$|^0$`);
-            } else if (beforeLen && afterLen === 0) {
-                // 整数 建议设置maxlength
-                return new RegExp(`^[1-9]\\d{0,${bl}}$|^0$`);
-            } else if (beforeLen && !afterLen && !wholeLen) {
-                // 只限制小数点前位数，不限制小数点后位数
-                return new RegExp(`^[1-9]\\d{0,${bl}}$|^[1-9]\\d{0,${bl}}\\.\\d*[1-9]$|^0$`);
-            } else if (!beforeLen && afterLen && !wholeLen) {
-                // 只限制小数点后位数，不限制小数点前位数
-                return new RegExp(`^[1-9]\\d*\\.\\d{0,${al}}[1-9]$|^0\\.\\d{0,${al}}[1-9]$`);
-            } else if (wholeLen) {
-                // 必须给input设置maxlength
-                if (beforeLen && !afterLen) {
-                    // 限制总位数和小数点前位数
-                    return new RegExp(`^[1-9]\\d{0,${bl}}$|^[1-9]\\d{0,${bl}}\\.\\d*[1-9]$|^0$\\.\\d{0,${wholeLen - 3}}[1-9]$|^0$`);
-                } else if (!beforeLen && afterLen) {
-                    // 限制总位数和小数点后位数
-                    return new RegExp(`^[1-9]\\d{0,${wl}}$|^[1-9]\\d{0,${wholeLen - 2}}\\.\\d{0,${al}}[1-9]$|^0\\.\\d{0,${al}}[1-9]$|^0$`);
-                }
-            }
-        },
+        // getNumRegExp (beforeLen = null, afterLen = null, wholeLen = null) {
+        //     const wl = wholeLen - 1;
+        //     const bl = beforeLen - 1;
+        //     const al = afterLen - 1;
+        //     if (beforeLen && afterLen > 0) {
+        //         // 小数，并限制小数点前/后位数
+        //         return new RegExp(`^[1-9]\\d{0,${bl}}$|^[1-9]\\d{0,${bl}}\\.\\d{0,${al}}[1-9]$|^0\\.\\d{0,${al}}[1-9]$|^0$`);
+        //     } else if (beforeLen && afterLen === 0) {
+        //         // 整数 建议设置maxlength
+        //         return new RegExp(`^[1-9]\\d{0,${bl}}$|^0$`);
+        //     } else if (beforeLen && !afterLen && !wholeLen) {
+        //         // 只限制小数点前位数，不限制小数点后位数
+        //         return new RegExp(`^[1-9]\\d{0,${bl}}$|^[1-9]\\d{0,${bl}}\\.\\d*[1-9]$|^0$`);
+        //     } else if (!beforeLen && afterLen && !wholeLen) {
+        //         // 只限制小数点后位数，不限制小数点前位数
+        //         return new RegExp(`^[1-9]\\d*\\.\\d{0,${al}}[1-9]$|^0\\.\\d{0,${al}}[1-9]$`);
+        //     } else if (wholeLen) {
+        //         // 必须给input设置maxlength
+        //         if (beforeLen && !afterLen) {
+        //             // 限制总位数和小数点前位数
+        //             return new RegExp(`^[1-9]\\d{0,${bl}}$|^[1-9]\\d{0,${bl}}\\.\\d*[1-9]$|^0$\\.\\d{0,${wholeLen - 3}}[1-9]$|^0$`);
+        //         } else if (!beforeLen && afterLen) {
+        //             // 限制总位数和小数点后位数
+        //             return new RegExp(`^[1-9]\\d{0,${wl}}$|^[1-9]\\d{0,${wholeLen - 2}}\\.\\d{0,${al}}[1-9]$|^0\\.\\d{0,${al}}[1-9]$|^0$`);
+        //         }
+        //     }
+        // },
+    },
+    mounted() {
+        console.log(getNumRegExp);
     },
 }
 </script>

@@ -30,6 +30,9 @@ import International from './views/international'
 import Swiper from './views/swiper'
 import Input from './views/input'
 import Danmu from './views/danmu'
+import Chart from './views/chart'
+import Wallet from './views/wallet'
+import Canvas from './views/canvas'
 
 Vue.use(Router)
 
@@ -177,6 +180,18 @@ export default new Router({
     {
         path: '/danmu',
         component: Danmu,
-      },
+    },
+    {
+    path: '/chart',
+    component: Chart,
+    },
+    {
+        path: '/wallet',
+        component: Wallet,
+    },
+    {
+        path: '/canvas',
+        component: Canvas,
+    },
   ]
 })

@@ -24,6 +24,9 @@
       <router-link to="/International">国际化</router-link> |
       <router-link to="/swiper">轮播图</router-link> |
       <router-link to="/input">输入框换行</router-link> |
+      <router-link to="/wallet">WalletConnect</router-link> |
+      <router-link to="/canvas">Canvas</router-link> |
+
 
       <button @click="$router.push('./plugins?name=zhangli')">路由跳转</button>
     </div>

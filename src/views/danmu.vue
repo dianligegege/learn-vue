@@ -84,7 +84,7 @@ export default {
                     // }
                     // 根据时间校验
                     const now =new Date().getTime();
-                    showDanmu = now - this.newTime > 500;
+                    showDanmu = now - this.newTime > 1000;
                     setTimeout(() => {
                         if (!go) {
                             if (showDanmu) {
@@ -111,7 +111,7 @@ export default {
                 box.appendChild(dom);
                 this.startDanmu();
                 this.clearDom();
-            }, 2000);
+            }, Math.floor(Math.random() * 1000));
         },
         clearDom() {
             const box = document.getElementById('danmu2');

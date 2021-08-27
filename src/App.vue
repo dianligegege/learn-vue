@@ -14,6 +14,7 @@
       <router-link to="/watch">watch</router-link> |
       <router-link to="/animate">animate</router-link> |
       <router-link to="/form/form">form</router-link> |
+      <br>
       <router-link to="/responsive">responsive</router-link> |
       <router-link to="/directives">directives</router-link> |
       <router-link to="/form/plugins">plugins</router-link> |
@@ -26,9 +27,10 @@
       <router-link to="/input">输入框换行</router-link> |
       <router-link to="/wallet">WalletConnect</router-link> |
       <router-link to="/canvas">Canvas</router-link> |
-
-
       <button @click="$router.push('./plugins?name=zhangli')">路由跳转</button>
+      <br>
+      <router-link to="/table">Table</router-link> |
+      <router-link to="/iframe-father">iframeFather</router-link> |
     </div>
     <router-view/>
   </div>

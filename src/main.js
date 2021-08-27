@@ -9,6 +9,7 @@ import i18n from './i18n'
 import ElementUI from 'element-ui';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import 'element-ui/lib/theme-chalk/index.css';
 
 // svg 处理
 import '@/assets/icons/index.js'

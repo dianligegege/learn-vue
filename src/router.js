@@ -33,6 +33,9 @@ import Danmu from './views/danmu'
 import Chart from './views/chart'
 import Wallet from './views/wallet'
 import Canvas from './views/canvas'
+import Table from './views/table'
+import IframeFather from './views/iframe/father'
+import IframeSon from './views/iframe/son'
 
 Vue.use(Router)
 
@@ -192,6 +195,18 @@ export default new Router({
     {
         path: '/canvas',
         component: Canvas,
+    },
+    {
+      path: '/table',
+      component: Table,
+    },
+    {
+      path: '/iframe-father',
+      component: IframeFather,
+    },
+    {
+      path: '/iframe-son',
+      component: IframeSon,
     },
   ]
 })

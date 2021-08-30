@@ -14,6 +14,15 @@
   </div>
   <hr>
   当前语言： {{ language }}
+  <hr>
+  <el-select v-model="selectVlaue" placeholder="切换当前语言" @change="selectChange">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
 </div>
 </template>
 
@@ -25,6 +34,17 @@ export default {
       myName: '',
       sonName: '',
       language: '',
+      selectVlaue: 'zh-cn',
+      options: [
+        {
+          value: 'en-us',
+          label: 'en-us',
+        },
+        {
+          value: 'zh-cn',
+          label: 'zh-cn',
+        }
+      ],
     }
   },
   methods: {
@@ -44,6 +64,14 @@ export default {
         cmd: 'returnValue',
         params: {
           sonName: this.sonName,
+        },
+      }, '*');
+    },
+    selectChange() {
+      window.parent.postMessage({
+        cmd: 'changeLanguage',
+        params: {
+          language: this.selectVlaue,
         },
       }, '*');
     },

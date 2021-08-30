@@ -31,10 +31,21 @@
         :value="item.value">
       </el-option>
     </el-select>
+    <p>使用post.js</p>
+    <el-select v-model="selectVlauePost" placeholder="切换当前语言" @change="selectChangePost">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
   </div>
 </template>
 
 <script>
+import PostMessage from './post';
+
 export default {
   data() {
     return {
@@ -42,8 +53,10 @@ export default {
       input1: '',
       myName: '',
       iframeWindow: {},
+      fatherPost: {},
       sonName: '',
       selectVlaue: 'zh-cn',
+      selectVlauePost: 'zh-cn',
       options: [
         {
           value: 'en-us',
@@ -59,6 +72,7 @@ export default {
   methods: {
     init() {
       const dom = this.$refs.father;
+      this.fatherPost = new PostMessage(dom);
       const iframeWindow = dom.contentWindow;
       this.iframeWindow = iframeWindow;
     },
@@ -84,6 +98,11 @@ export default {
           language: this.selectVlaue,
         },
       }, '*');
+    },
+    selectChangePost() {
+      this.fatherPost.postCurrentLanguage({
+        language: this.selectVlauePost,
+      });
     },
   },
   mounted() {

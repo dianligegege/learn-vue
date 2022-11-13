@@ -14,7 +14,7 @@
   "dependencies": {
     "@walletconnect/web3-provider": "^1.4.1",
     "element-ui": "^2.13.2",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "iview": "^3.4.2",
     "jsdoc": "^3.5.5",
     "lightweight-charts": "^3.3.0",
@@ -32,16 +32,16 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^10.0.1",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
-    "svg-sprite-loader": "^4.1.6",
+    "svg-sprite-loader": "^6.0.11",
     "vue-cli-plugin-i18n": "^0.6.0",
     "vue-cli-plugin-iview": "^1.0.6",
     "vue-template-compiler": "^2.5.21",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.12"
   },
   "eslintConfig": {
     "root": true,
